@@ -31,6 +31,7 @@ TARGET_SPECIFIC_HEADER_PATH += $(DEVICE_PATH)/include
 
 # Kernel properties
 TARGET_KERNEL_CONFIG := lineageos_shinano_leo_defconfig
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Partition information
 BOARD_VOLD_MAX_PARTITIONS := 25
@@ -39,7 +40,7 @@ BOARD_VOLD_MAX_PARTITIONS := 25
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/clearpad/wakeup_gesture"
 
 # SELinux
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+#BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Inherit from proprietary files
 include vendor/sony/z3/BoardConfigVendor.mk
